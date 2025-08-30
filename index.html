@@ -8,15 +8,18 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header with Mobile Menu -->
   <header>
-    <h1>Abhishek Pal</h1>
-    <p>B.Tech Student | Cybersecurity & Forensics Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-container">
+      <h1>Abhishek Pal</h1>
+      <p>B.Tech Student | Cybersecurity & Forensics Enthusiast</p>
+      <nav id="navbar">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    </div>
   </header>
 
   <!-- About Me -->
@@ -73,6 +76,28 @@
   <footer>
     &copy; 2025 Abhishek Pal. All rights reserved.
   </footer>
+
+  <!-- Smooth Scrolling & Mobile Menu -->
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Close mobile menu after click
+        document.getElementById('navbar').classList.remove('active');
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
