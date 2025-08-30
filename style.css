@@ -1,7 +1,8 @@
+/* Complete CSS for your updated portfolio */
+
 /* Reset default styles */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-/* Body styles */
 body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a;
@@ -9,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   padding: 2rem;
   text-align: center;
@@ -39,7 +39,6 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* Sections */
 section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -53,22 +52,69 @@ section h2 {
   text-align: center;
 }
 
-/* About section */
 .about p {
   text-align: center;
   font-size: 1.1rem;
   color: #e2e8f0;
 }
 
-/* Skills grid */
-.skills-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
-.skill {
-  padding: 1rem;
+.project {
   background: #1e293b;
-  border-radius: 12px;
-  transition:
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+}
+.project h3 {
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+.project p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.project a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 2rem;
+}
+.contact a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: #38bdf8;
+  color: #0f172a;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contact a:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0f172a;
+  color: #64748b;
+  font-size: 0.9rem;
+}
