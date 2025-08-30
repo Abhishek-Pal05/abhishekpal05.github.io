@@ -6,6 +6,7 @@ body {
   background: #0f172a;
   color: #f1f5f9;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -13,20 +14,24 @@ header {
   padding: 2rem;
   text-align: center;
   background: linear-gradient(135deg, #1e293b, #0f172a);
+  position: relative;
 }
 
 header h1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: #38bdf8;
+  animation: fadeIn 1s ease-in;
 }
 
 header p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   color: #cbd5e1;
+  animation: fadeIn 1.5s ease-in;
 }
 
+/* Navigation */
 nav {
   margin-top: 1rem;
 }
@@ -43,11 +48,39 @@ nav a:hover {
   color: #38bdf8;
 }
 
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #38bdf8;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #1e293b;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+  }
+  nav.active {display: flex;}
+  nav a {margin: 1rem 0; text-align: center;}
+  .menu-toggle {display: block;}
+}
+
 /* Sections */
 section {
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
+  animation: fadeInUp 1s ease-in;
 }
 
 section h2 {
@@ -69,7 +102,9 @@ section h2 {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  transition: transform 0.3s;
 }
+.profile-img:hover {transform: scale(1.05);}
 
 /* Projects */
 .projects-grid {
@@ -146,4 +181,14 @@ footer {
   background: #0f172a;
   color: #64748b;
   font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;} to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);} 
+  to {opacity: 1; transform: translateY(0);}
 }
