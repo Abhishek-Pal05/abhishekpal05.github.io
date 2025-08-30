@@ -59,20 +59,18 @@ nav a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #1e293b;
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    padding: 1rem 0;
-  }
-  nav.active {display: flex;}
-  nav a {margin: 1rem 0; text-align: center;}
-  .menu-toggle {display: block;}
+/* Profile Image */
+.profile-img {
+  width: 120px;      /* smaller size */
+  height: 120px;     /* smaller size */
+  border-radius: 50%; /* circular */
+  margin-bottom: 1rem;
+  object-fit: cover;  /* ensures image is not stretched */
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* subtle hover effect */
 }
 
 /* Sections */
