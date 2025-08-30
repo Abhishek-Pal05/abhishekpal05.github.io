@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Reset */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
 body {
@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   padding: 2rem;
   text-align: center;
@@ -42,6 +43,7 @@ nav a:hover {
   color: #38bdf8;
 }
 
+/* Sections */
 section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -55,12 +57,21 @@ section h2 {
   text-align: center;
 }
 
+/* About Me */
 .about p {
   text-align: center;
   font-size: 1.1rem;
   color: #e2e8f0;
 }
 
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Projects */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,9 +111,15 @@ section h2 {
   text-decoration: underline;
 }
 
+/* Contact */
 .contact {
   text-align: center;
   margin-top: 2rem;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+  color: #cbd5e1;
 }
 
 .contact a {
@@ -122,6 +139,7 @@ section h2 {
   color: #fff;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
